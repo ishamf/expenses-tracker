@@ -33,12 +33,17 @@ class ExpenseList extends React.Component {
     }
   }
 
+  componentWillReceiveProps ({expenses}) {
+    this.setState({dataSource: this.state.dataSource.cloneWithRows(expenses)})
+  }
+
   render () {
     const style = this.props.style || {}
 
     return (
       <View style={style}>
         <ListView
+          enableEmptySections
           contentContainerStyle={styles.container}
           dataSource={this.state.dataSource}
           renderRow={(rowData) =>

@@ -7,7 +7,7 @@
 import React, { Component } from 'react'
 import {AppRegistry, AsyncStorage} from 'react-native'
 import {compose, applyMiddleware, createStore} from 'redux'
-import {persistStore, autoRehydrate} from 'redux-persist-immutable'
+import {persistStore, autoRehydrate} from 'redux-persist'
 import {Provider} from 'react-redux'
 import thunk from 'redux-thunk'
 import App from './src/app'
